@@ -146,8 +146,6 @@ namespace UnityEditor.Tilemaps
             ToolManager.activeToolChanged += ActiveToolChanged;
             ToolManager.activeToolChanging += ActiveToolChanging;
 
-            AssetPreview.SetPreviewTextureCacheSize(256, GetInstanceID());
-
             ShortcutIntegration.instance.contextManager.RegisterToolContext(m_ShortcutContext);
         }
 
