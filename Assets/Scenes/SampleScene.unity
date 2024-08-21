@@ -461,7 +461,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1000010587196672, guid: 8ec728fea85097b43ad9358333759bfa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 929963153}
   m_SourcePrefab: {fileID: 100100000, guid: 8ec728fea85097b43ad9358333759bfa, type: 3}
 --- !u!4 &101995600 stripped
 Transform:
@@ -1860,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 330642404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3867,7 +3870,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!64 &829140517
 MeshCollider:
@@ -4025,6 +4028,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012348412654, guid: a50af88759b02d74b8328377b33ab3e8, type: 3}
   m_PrefabInstance: {fileID: 18777917}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &929963144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010587196672, guid: 8ec728fea85097b43ad9358333759bfa, type: 3}
+  m_PrefabInstance: {fileID: 101995599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &929963153
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929963144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300066, guid: c7f7a9ec09a97d144963b6dd16448dc3, type: 3}
 --- !u!1001 &945184858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4043,7 +4073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554313012, guid: 75e99e987b1c5aa48b7b9e465f768fa3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6820941
+      value: -1.745
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554313012, guid: 75e99e987b1c5aa48b7b9e465f768fa3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4242,7 +4272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2353054730375228307, guid: 31ccad13860a6ed45b38dc0e8c45fa8e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.136
+      value: 0.032
       objectReference: {fileID: 0}
     - target: {fileID: 2353054730375228307, guid: 31ccad13860a6ed45b38dc0e8c45fa8e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4701,14 +4731,6 @@ MonoBehaviour:
       - m_Name: 
         m_Id: 0ab49951-953e-4b9b-afcf-dbba3a79c811
         m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 38261e6e-54c8-4a34-9642-a09f020e75ef
-        m_Path: <HandheldARInputDevice>/devicePosition
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -5219,7 +5241,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!64 &1179961194
 MeshCollider:
@@ -5305,7 +5327,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!64 &1190400265
 MeshCollider:
@@ -5624,7 +5646,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!64 &1281097603
 MeshCollider:
@@ -8878,7 +8900,7 @@ Transform:
   m_GameObject: {fileID: 1798301208}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: 0.89, z: -3.44}
+  m_LocalPosition: {x: 3.52, y: 0, z: -3.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8939,7 +8961,7 @@ CharacterController:
   m_StepOffset: 0
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &1798301215
 Rigidbody:
   m_ObjectHideFlags: 0

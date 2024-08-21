@@ -11,6 +11,8 @@ public class checkGrab : MonoBehaviour
     private Vector3 ogPos;
     private Quaternion ogRot;
 
+    private bool grabbed = false;
+
     public Image toggleImg;
 
     void Start()
@@ -35,7 +37,11 @@ public class checkGrab : MonoBehaviour
 
     public void toggleSelect(){
         toggleImg.enabled = true;
-        Count_EPI.EPICheck +=1;
+        if(!grabbed){
+            Count_EPI.EPICheck +=1;
+            grabbed = true;
+        }
+        
 
         if(Count_EPI.EPICheck == 5){
             Count_EPI.canMoveToNext = true;

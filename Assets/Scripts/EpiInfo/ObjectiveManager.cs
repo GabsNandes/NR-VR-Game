@@ -22,6 +22,7 @@ public class ObjectiveManager : MonoBehaviour
             if(Count_EPI.canMoveToNext){
 
                 Debug.Log("Concluded");
+                QuitGame();
 
             }else{
 
@@ -31,6 +32,14 @@ public class ObjectiveManager : MonoBehaviour
 
         }
 
+    }
+
+    public void QuitGame()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+        Application.Quit();
     }
 
     void Start()
