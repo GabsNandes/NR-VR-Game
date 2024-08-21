@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class checkGrab : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class checkGrab : MonoBehaviour
     public Transform epi;
     private Vector3 ogPos;
     private Quaternion ogRot;
+
+    public Image toggleImg;
+
     void Start()
     {
 
@@ -27,5 +31,14 @@ public class checkGrab : MonoBehaviour
             epi.rotation = ogRot;
         }
 
+    }
+
+    public void toggleSelect(){
+        toggleImg.enabled = true;
+        Count_EPI.EPICheck +=1;
+
+        if(Count_EPI.EPICheck == 5){
+            Count_EPI.canMoveToNext = true;
+        }
     }
 }

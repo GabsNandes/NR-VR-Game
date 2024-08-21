@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Count_EPI : MonoBehaviour
 {
-    int Eletric_EPI;
+    public static int EPICheck = 0;
 
-    int High_Work_EPI;
+    public static bool canMoveToNext = false;
 
     
 }

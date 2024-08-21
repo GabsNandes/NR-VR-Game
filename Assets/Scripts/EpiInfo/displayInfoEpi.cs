@@ -38,10 +38,6 @@ public class displayInfoEpi : MonoBehaviour
 
             string[] collection = text.Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
-            foreach (var sub in collection) {
-                Debug.Log(sub);
-            }
-
             return collection;
 
         }
