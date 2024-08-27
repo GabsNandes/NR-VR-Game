@@ -63,18 +63,23 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.42f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EpiInfo\MapObjects.cs" />
     <Compile Include="Assets\Ladder\Tools\Tools\Helper.cs" />
+    <Compile Include="Assets\Scripts\EpiInfo\EpiData.cs" />
     <Compile Include="Assets\Scripts\EpiInfo\ObjectiveManager.cs" />
     <Compile Include="Assets\Ladder\Tools\Tools\Parabola.cs" />
     <Compile Include="Assets\Ladder\Tools\Tools\ExtensionMethods.cs" />
     <Compile Include="Assets\Ladder\PropMaker\Scripts\Prop.cs" />
+    <Compile Include="Assets\Scripts\EpiInfo\MapParser.cs" />
     <Compile Include="Assets\Scripts\EpiInfo\displayInfoEpi.cs" />
     <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
     <Compile Include="Assets\Ladder\Tools\Tools\DataTypes.cs" />
+    <Compile Include="Assets\addEPI.cs" />
     <Compile Include="Assets\Scripts\Movement\InteractionController.cs" />
     <Compile Include="Assets\Scripts\EpiInfo\Count_EPI.cs" />
     <Compile Include="Assets\teleportationManager.cs" />
     <Compile Include="Assets\Scripts\EpiInfo\checkGrab.cs" />
+    <Compile Include="Assets\Scripts\EpiInfo\mapParseri.cs" />
     <Compile Include="Assets\Scripts\Take_Eletrical_EPI.cs" />
     <Compile Include="Assets\Scripts\Movement\MouseLook.cs" />
     <Compile Include="Assets\Ladder\PropMaker\Scripts\Ladder.cs" />

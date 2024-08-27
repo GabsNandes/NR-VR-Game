@@ -11,15 +11,24 @@ public class checkGrab : MonoBehaviour
     private Vector3 ogPos;
     private Quaternion ogRot;
 
+    private string name;
+
     private bool grabbed = false;
 
-    public Image toggleImg;
+    private Image toggleImg;
 
     void Start()
     {
 
         ogPos = epi.position;
         ogRot = epi.rotation;
+
+        name = this.gameObject.name;
+
+        toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
+
+        Debug.Log(toggleImg);
+
         
     }
 

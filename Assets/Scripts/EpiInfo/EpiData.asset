@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a17f7608094d94f87ca2b1eb4cc3c2, type: 3}
+  m_Name: EpiData
+  m_EditorClassIdentifier: 
+  Objects:
+  - name: Boots
+    prefab: {fileID: 5728894300798526661, guid: d7da5c00ff3fce94e9789911535494d8, type: 3}
+    variations:
+    - id: 1
+      offsetX: 0
+      offsetY: 1.4
+      rotation: 0
+  - name: EarMuffs
+    prefab: {fileID: 2223300220527705521, guid: 19d5bf359a906764e96e548c1adc2f13, type: 3}
+    variations:
+    - id: 2
+      offsetX: 0
+      offsetY: 1.45
+      rotation: 0
+  - name: Glasses
+    prefab: {fileID: 3602506603097586117, guid: 787d09cd9be25da449a889038e09c57c, type: 3}
+    variations:
+    - id: 3
+      offsetX: 0
+      offsetY: 1.5
+      rotation: 0
+  - name: HardHat
+    prefab: {fileID: 7579273934183214453, guid: bcd27cf90fa747c419e6462d9ca31cc7, type: 3}
+    variations:
+    - id: 4
+      offsetX: 0
+      offsetY: 1.4
+      rotation: 0
+  - name: Vest
+    prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
+    variations:
+    - id: 5
+      offsetX: 0
+      offsetY: 1.55
+      rotation: 0
