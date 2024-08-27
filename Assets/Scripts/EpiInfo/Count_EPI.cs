@@ -6,6 +6,8 @@ public class Count_EPI : MonoBehaviour
 {
     public static int EPICheck = 0;
 
+    public static int epiCount = 0;
+
     public static bool canMoveToNext = false;
 
     

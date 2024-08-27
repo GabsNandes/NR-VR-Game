@@ -7,7 +7,7 @@ public class checkGrab : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Transform epi;
+    private Transform epi;
     private Vector3 ogPos;
     private Quaternion ogRot;
 
@@ -16,21 +16,28 @@ public class checkGrab : MonoBehaviour
     private bool grabbed = false;
 
     private Image toggleImg;
+    private bool check = true;
 
-    void Start()
+    public void Start()
     {
-
+        epi = this.transform;
         ogPos = epi.position;
         ogRot = epi.rotation;
 
-        name = this.gameObject.name;
+        
+        name = epi.name;
+    }
 
-        toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
-
-        Debug.Log(toggleImg);
-
+    private void Update()
+    {   
+        if(check){
+            toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
+            toggleImg.enabled = false;
+            check = false;
+        }
         
     }
+
 
     // Update is called once per frame
     public void returnToOgPos(){
@@ -52,7 +59,7 @@ public class checkGrab : MonoBehaviour
         }
         
 
-        if(Count_EPI.EPICheck == 5){
+        if(Count_EPI.EPICheck == Count_EPI.epiCount){
             Count_EPI.canMoveToNext = true;
         }
     }
