@@ -46,23 +46,23 @@ public class displayInfoEpi : MonoBehaviour
 
         switch(name){
 
-            case "HardHat":
+            case "Capacete I":
                 infoEPI.text = collectionEPI[0];
             break;
 
-            case "Glasses":
+            case "Oculos I":
                 infoEPI.text = collectionEPI[1];
             break;
 
-            case "Boots":
+            case "Botas I":
                 infoEPI.text = collectionEPI[2];
             break;
 
-            case "Vest":
+            case "Veste I":
                 infoEPI.text = collectionEPI[3];
             break;
 
-            case "EarMuffs":
+            case "Protetores de Ouvido I":
                 infoEPI.text = collectionEPI[4];
             break;
 

@@ -29,6 +29,11 @@ public class checkGrab : MonoBehaviour
     }
 
     private void Update()
+    {
+        Generate();
+    }
+
+    private void Generate()
     {   
         if(check){
             toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
@@ -36,6 +41,7 @@ public class checkGrab : MonoBehaviour
             check = false;
         }
         
+
     }
 
 

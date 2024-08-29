@@ -47,15 +47,18 @@ public class EpiData : ScriptableObject
             if (Objects[i].variations.Exists(x => x.id == id))
             {
                 ObjectVariation variation = Objects[i].variations.Find(x => x.id == id);
-
+                
                 return new ObjectPrefab
                 {
+
                     name = Objects[i].name,
+                    
                     prefab = Objects[i].prefab,
                     rotation = variation.rotation,
                     offsetX = variation.offsetX,
                     offsetY = variation.offsetY
-                   
+                    
+                    
                 };
             }
             

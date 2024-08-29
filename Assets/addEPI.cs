@@ -76,7 +76,7 @@ public class addEPI : MonoBehaviour
 
         RectTransform labelRect = label.GetComponent<RectTransform>();
         labelRect.sizeDelta = new Vector2(140, 30);
-        labelRect.anchoredPosition = new Vector2(40, 0);
+        labelRect.anchoredPosition = new Vector2(0, 0);
 
         
 
@@ -87,7 +87,7 @@ public class addEPI : MonoBehaviour
 
         // correct z position
         toggleRectPos.localPosition = new Vector3(0, position, 0);
-        backgroundRect.localPosition = new Vector3(-42, 0, 0);
+        backgroundRect.localPosition = new Vector3(-100, 0, 0);
 
         position = position - 0.2f;
 
@@ -112,7 +112,6 @@ public class addEPI : MonoBehaviour
         {
             propData = epiData.GetObject(type);
             prefab = propData.prefab;
-            
         }
         catch (System.Exception)
         {
@@ -120,8 +119,8 @@ public class addEPI : MonoBehaviour
             return;
         }
 
-
-        string name = prefab.name;
+        name = propData.name;
+        Count_EPI.epiArray.Append(name);
 
         Create_entry(name);
 

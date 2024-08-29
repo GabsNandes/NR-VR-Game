@@ -13,35 +13,35 @@ MonoBehaviour:
   m_Name: EpiData
   m_EditorClassIdentifier: 
   Objects:
-  - name: Boots
+  - name: Botas
     prefab: {fileID: 5728894300798526661, guid: d7da5c00ff3fce94e9789911535494d8, type: 3}
     variations:
     - id: 1
       offsetX: 0
       offsetY: 1.35
       rotation: -90
-  - name: EarMuffs
+  - name: Protetores de ouvido
     prefab: {fileID: 2223300220527705521, guid: 19d5bf359a906764e96e548c1adc2f13, type: 3}
     variations:
     - id: 2
       offsetX: 0
       offsetY: 1.45
       rotation: 17
-  - name: Glasses
+  - name: Oculos
     prefab: {fileID: 3602506603097586117, guid: 787d09cd9be25da449a889038e09c57c, type: 3}
     variations:
     - id: 3
       offsetX: 0
       offsetY: 1.45
       rotation: -120
-  - name: HardHat
+  - name: Capacete
     prefab: {fileID: 7579273934183214453, guid: bcd27cf90fa747c419e6462d9ca31cc7, type: 3}
     variations:
     - id: 4
       offsetX: 0
       offsetY: 1.37
       rotation: -150
-  - name: Vest
+  - name: Veste
     prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
     variations:
     - id: 5
