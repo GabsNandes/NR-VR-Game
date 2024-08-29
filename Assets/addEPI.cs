@@ -101,12 +101,13 @@ public class addEPI : MonoBehaviour
     }
 
 
-    private void InstanceProp(MapProp prop, EpiData epiData, GameObject parent = null, string tag = "")
+    private void InstanceProp(MapProp prop, EpiData epiData, string tag = "")
     {
         string type = prop.getType();
         float[] pos = prop.getPos();
         ObjectPrefab propData = null;
         GameObject prefab = null;
+        GameObject parent = null;
         
         try
         {
@@ -120,9 +121,23 @@ public class addEPI : MonoBehaviour
         }
 
         name = propData.name;
-        Count_EPI.epiArray.Append(name);
+        Debug.Log("isGrabbable: " + propData.isGrabbable);
 
-        Create_entry(name);
+        if(propData.isGrabbable)
+        {
+            Count_EPI.epiArray.Append(name);
+
+            Create_entry(name);
+            
+            parent = GameObject.Find("EPI grabable");
+        }
+        else
+        {
+
+            parent = GameObject.Find("EPI");
+
+        }
+        
 
         Debug.Log("Instantiating " + name);
 
@@ -184,7 +199,7 @@ public class addEPI : MonoBehaviour
         
         foreach (EPI obj in epi)
             {
-                 InstanceProp(obj, epiObjectData, epiParent, "EPI");
+                 InstanceProp(obj, epiObjectData, "EPI");
             }
 
        
@@ -192,7 +207,7 @@ public class addEPI : MonoBehaviour
         
 
         Transform mapTransform = GetComponent<Transform>();
-        epiParent.transform.parent = mapTransform;
+        
 
     }
 
@@ -201,7 +216,6 @@ public class addEPI : MonoBehaviour
 
 
         panel = GameObject.Find("EPI grabable/Canvas/Panel");
-        epiParent = GameObject.Find("EPI grabable");
 
         defaultMapPath = "Maps/test";
 

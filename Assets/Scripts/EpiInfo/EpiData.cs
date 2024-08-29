@@ -18,11 +18,13 @@ public class EpiData : ScriptableObject
 
     [Serializable]
     public class ObjectVariation
-    {
+    {   
+        public GameObject prefab;
         public string id;
         public float offsetX;
         public float offsetY;
         public int rotation;
+        public bool isGrabbable;
     
     }
 
@@ -32,7 +34,7 @@ public class EpiData : ScriptableObject
 
 
         public string name;
-        public GameObject prefab;
+        
         
         public List<ObjectVariation> variations = new List<ObjectVariation>();
 
@@ -53,10 +55,11 @@ public class EpiData : ScriptableObject
 
                     name = Objects[i].name,
                     
-                    prefab = Objects[i].prefab,
+                    prefab = variation.prefab,
                     rotation = variation.rotation,
                     offsetX = variation.offsetX,
-                    offsetY = variation.offsetY
+                    offsetY = variation.offsetY,
+                    isGrabbable = variation.isGrabbable
                     
                     
                 };

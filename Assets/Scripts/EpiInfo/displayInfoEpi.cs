@@ -14,7 +14,7 @@ public class displayInfoEpi : MonoBehaviour
     public TextAsset file;
     private string text;
 
-    public TextMeshProUGUI infoEPI;
+    private TextMeshProUGUI infoEPI;
 
     public GameObject epi;
 
@@ -27,6 +27,8 @@ public class displayInfoEpi : MonoBehaviour
         text = file.ToString();
 
         collectionEPI = ClearString();
+
+        infoEPI = GameObject.Find("EPI/Canvas/Panel/DisplayEPI").GetComponent<TextMeshProUGUI>();
 
         name = epi.name;
 
@@ -46,23 +48,23 @@ public class displayInfoEpi : MonoBehaviour
 
         switch(name){
 
-            case "Capacete I":
+            case "Capacete":
                 infoEPI.text = collectionEPI[0];
             break;
 
-            case "Oculos I":
+            case "Oculos":
                 infoEPI.text = collectionEPI[1];
             break;
 
-            case "Botas I":
+            case "Botas":
                 infoEPI.text = collectionEPI[2];
             break;
 
-            case "Veste I":
+            case "Veste":
                 infoEPI.text = collectionEPI[3];
             break;
 
-            case "Protetores de Ouvido I":
+            case "Protetores de ouvido":
                 infoEPI.text = collectionEPI[4];
             break;
 

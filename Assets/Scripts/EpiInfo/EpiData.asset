@@ -14,37 +14,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - name: Botas
-    prefab: {fileID: 5728894300798526661, guid: d7da5c00ff3fce94e9789911535494d8, type: 3}
     variations:
-    - id: 1
+    - prefab: {fileID: 5728894300798526661, guid: d7da5c00ff3fce94e9789911535494d8, type: 3}
+      id: 1g
       offsetX: 0
       offsetY: 1.35
       rotation: -90
+      isGrabbable: 1
+    - prefab: {fileID: 5728894300798526661, guid: 184e055cc0caf5741933f57a86dcbdc2, type: 3}
+      id: 1i
+      offsetX: 0
+      offsetY: 1.35
+      rotation: -90
+      isGrabbable: 0
   - name: Protetores de ouvido
-    prefab: {fileID: 2223300220527705521, guid: 19d5bf359a906764e96e548c1adc2f13, type: 3}
     variations:
-    - id: 2
+    - prefab: {fileID: 2223300220527705521, guid: 19d5bf359a906764e96e548c1adc2f13, type: 3}
+      id: 2g
       offsetX: 0
       offsetY: 1.45
       rotation: 17
+      isGrabbable: 1
+    - prefab: {fileID: 2223300220527705521, guid: 1fc6dbba8a117d443bf88cf37a848ccc, type: 3}
+      id: 2i
+      offsetX: 0
+      offsetY: 1.45
+      rotation: 17
+      isGrabbable: 0
   - name: Oculos
-    prefab: {fileID: 3602506603097586117, guid: 787d09cd9be25da449a889038e09c57c, type: 3}
     variations:
-    - id: 3
+    - prefab: {fileID: 3602506603097586117, guid: 787d09cd9be25da449a889038e09c57c, type: 3}
+      id: 3g
       offsetX: 0
       offsetY: 1.45
       rotation: -120
+      isGrabbable: 1
+    - prefab: {fileID: 3602506603097586117, guid: 7280a85d2881c194792ff3399702b837, type: 3}
+      id: 3i
+      offsetX: 0
+      offsetY: 1.45
+      rotation: -120
+      isGrabbable: 0
   - name: Capacete
-    prefab: {fileID: 7579273934183214453, guid: bcd27cf90fa747c419e6462d9ca31cc7, type: 3}
     variations:
-    - id: 4
+    - prefab: {fileID: 7579273934183214453, guid: bcd27cf90fa747c419e6462d9ca31cc7, type: 3}
+      id: 4g
       offsetX: 0
       offsetY: 1.37
       rotation: -150
+      isGrabbable: 1
+    - prefab: {fileID: 7579273934183214453, guid: e642acf1924005b4cb313de0ff552e94, type: 3}
+      id: 4i
+      offsetX: 0
+      offsetY: 1.37
+      rotation: -150
+      isGrabbable: 0
   - name: Veste
-    prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
     variations:
-    - id: 5
+    - prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
+      id: 5g
       offsetX: 0
       offsetY: 1.5
       rotation: -90
+      isGrabbable: 1
+    - prefab: {fileID: 6567996035568647600, guid: c6dc69673a306e74d83a63b67e51c252, type: 3}
+      id: 5i
+      offsetX: 0
+      offsetY: 1.5
+      rotation: -90
+      isGrabbable: 0

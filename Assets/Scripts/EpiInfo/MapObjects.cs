@@ -22,6 +22,7 @@ namespace MapObjects
         public float offsetX;
         public float offsetY;
         public int rotation;
+        public bool isGrabbable;
     }
 
     
