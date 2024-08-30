@@ -74,6 +74,9 @@ public class addEPI : MonoBehaviour
         RectTransform checkmarkRect = checkmark.GetComponent<RectTransform>();
         checkmarkRect.sizeDelta = new Vector2(16, 16);
 
+        toggleImg = checkmarkImage.GetComponent<Image>();
+        toggleImg.enabled = false;
+
         RectTransform labelRect = label.GetComponent<RectTransform>();
         labelRect.sizeDelta = new Vector2(140, 30);
         labelRect.anchoredPosition = new Vector2(0, 0);
@@ -120,6 +123,7 @@ public class addEPI : MonoBehaviour
             return;
         }
 
+        
         name = propData.name;
         Debug.Log("isGrabbable: " + propData.isGrabbable);
 
@@ -157,7 +161,9 @@ public class addEPI : MonoBehaviour
         // Debug.LogWarning($"nome: {obj.name} quantidade: {prefab.GetComponents<MeshCollider>().Count()}");
 
         obj.name = name;
+        int LayerEpi = LayerMask.NameToLayer("EPI");
 
+        obj.layer = LayerEpi;
         obj.transform.parent = parent.transform;
         obj.tag = tag;
 
@@ -165,6 +171,7 @@ public class addEPI : MonoBehaviour
     
 
         AddTagsToChildren(obj.transform, obj.tag);
+        AddLayersToChildren(obj.transform, LayerEpi);
 
 
         // Use this code to remove extra colliders in the prefab
@@ -199,14 +206,15 @@ public class addEPI : MonoBehaviour
         
         foreach (EPI obj in epi)
             {
-                 InstanceProp(obj, epiObjectData, "EPI");
+                
+                InstanceProp(obj, epiObjectData, "EPI");
             }
 
        
 
         
 
-        Transform mapTransform = GetComponent<Transform>();
+        
         
 
     }
@@ -249,5 +257,16 @@ public class addEPI : MonoBehaviour
         
     
 
+    }
+
+    public void AddLayersToChildren(Transform parentTransform, int layer)
+    {
+        
+        foreach (Transform child in parentTransform)
+        {
+           
+            child.gameObject.layer = layer;
+            AddLayersToChildren(child,layer);
+        }
     }
 }

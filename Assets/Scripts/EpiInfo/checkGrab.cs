@@ -28,22 +28,6 @@ public class checkGrab : MonoBehaviour
         name = epi.name;
     }
 
-    private void Update()
-    {
-        Generate();
-    }
-
-    private void Generate()
-    {   
-        if(check){
-            toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
-            toggleImg.enabled = false;
-            check = false;
-        }
-        
-
-    }
-
 
     // Update is called once per frame
     public void returnToOgPos(){
@@ -55,18 +39,5 @@ public class checkGrab : MonoBehaviour
             epi.rotation = ogRot;
         }
 
-    }
-
-    public void toggleSelect(){
-        toggleImg.enabled = true;
-        if(!grabbed){
-            Count_EPI.EPICheck +=1;
-            grabbed = true;
-        }
-        
-
-        if(Count_EPI.EPICheck == Count_EPI.epiCount){
-            Count_EPI.canMoveToNext = true;
-        }
     }
 }
