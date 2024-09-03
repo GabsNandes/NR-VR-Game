@@ -7,6 +7,6 @@ namespace MapParser
 {
     public interface IMapParser
     {
-        Map ParseMap();
+        Session ParseMap();
     }
 }

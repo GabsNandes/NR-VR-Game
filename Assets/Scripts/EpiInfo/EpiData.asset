@@ -19,12 +19,14 @@ MonoBehaviour:
       id: 1g
       offsetX: 0
       offsetY: 0.95
+      offsetZ: 0
       rotation: -90
       isGrabbable: 1
     - prefab: {fileID: 5728894300798526661, guid: 184e055cc0caf5741933f57a86dcbdc2, type: 3}
       id: 1i
       offsetX: 0
       offsetY: 0.95
+      offsetZ: 0
       rotation: 90
       isGrabbable: 0
   - name: Protetores de ouvido
@@ -33,12 +35,14 @@ MonoBehaviour:
       id: 2g
       offsetX: 0
       offsetY: 1.05
+      offsetZ: 0
       rotation: 17
       isGrabbable: 1
     - prefab: {fileID: 2223300220527705521, guid: 1fc6dbba8a117d443bf88cf37a848ccc, type: 3}
       id: 2i
       offsetX: 0
       offsetY: 1.05
+      offsetZ: 0
       rotation: 0
       isGrabbable: 0
   - name: Oculos
@@ -47,12 +51,14 @@ MonoBehaviour:
       id: 3g
       offsetX: 0
       offsetY: 1.05
+      offsetZ: 0
       rotation: -120
       isGrabbable: 1
     - prefab: {fileID: 3602506603097586117, guid: 7280a85d2881c194792ff3399702b837, type: 3}
       id: 3i
       offsetX: 0
       offsetY: 1.05
+      offsetZ: 0
       rotation: 180
       isGrabbable: 0
   - name: Capacete
@@ -61,12 +67,14 @@ MonoBehaviour:
       id: 4g
       offsetX: 0
       offsetY: 0.97
+      offsetZ: 0
       rotation: -150
       isGrabbable: 1
     - prefab: {fileID: 7579273934183214453, guid: e642acf1924005b4cb313de0ff552e94, type: 3}
       id: 4i
       offsetX: 0
       offsetY: 0.97
+      offsetZ: 0
       rotation: -150
       isGrabbable: 0
   - name: Veste
@@ -75,11 +83,13 @@ MonoBehaviour:
       id: 5g
       offsetX: 0
       offsetY: 1.1
+      offsetZ: 0
       rotation: -90
       isGrabbable: 1
     - prefab: {fileID: 6567996035568647600, guid: c6dc69673a306e74d83a63b67e51c252, type: 3}
       id: 5i
       offsetX: 0
       offsetY: 1.1
+      offsetZ: 0
       rotation: 180
       isGrabbable: 0

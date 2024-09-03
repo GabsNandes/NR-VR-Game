@@ -23,6 +23,7 @@ public class EpiData : ScriptableObject
         public string id;
         public float offsetX;
         public float offsetY;
+        public float offsetZ;
         public int rotation;
         public bool isGrabbable;
     
@@ -59,6 +60,7 @@ public class EpiData : ScriptableObject
                     rotation = variation.rotation,
                     offsetX = variation.offsetX,
                     offsetY = variation.offsetY,
+                    offsetZ = variation.offsetZ,
                     isGrabbable = variation.isGrabbable
                     
                     

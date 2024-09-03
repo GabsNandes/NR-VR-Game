@@ -6,11 +6,26 @@ using UnityEngine;
 
 namespace MapObjects
 {
-    public interface MapProp
-    {
-        public float[] getPos();
-        public string getType();
+    [Serializable]
+    public class Session {
+        public string id;
+        public string code;
+        public Training training;
     }
+
+    [Serializable]
+    public class Training {
+        public string name;
+        public string description;
+        public List<UnityObject> unityObjects;
+    }
+
+
+    // public interface MapProp
+    // {
+    //     public float[] getPos();
+    //     public string getType();
+    // }
 
 
     [Serializable]
@@ -21,6 +36,8 @@ namespace MapObjects
         public GameObject prefab;
         public float offsetX;
         public float offsetY;
+
+        public float offsetZ;
         public int rotation;
         public bool isGrabbable;
     }
@@ -28,62 +45,21 @@ namespace MapObjects
     
 
     [Serializable]
-    public class EPI : MapProp
+    public class UnityObject 
     {
         public float[] pos;
         public string type;
 
-        public float[] getPos()
-        {
-            return pos;
-        }
-
-        public string getType()
-        {
-            return type;
-        }
-
-        public string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            if (this.pos != null)
-            {
-                sb.Append("EPI: " + this.type + " " + this.pos[0] + " " + this.pos[1]);
-            }
-            else
-            {
-                sb.Append("EPI: " + this.type + " null");
-            }
-            return sb.ToString();
-        }
     }
+    
 
     
-    [Serializable]
-    public class Layers
-    {
-
-        public List<EPI> epi;
-
-    }
 
     [Serializable]
     public class Map
     {
      
-        public Layers layers;
-
-        public Map(
-            
-            List<EPI> epi
-        )
-        {
-
-            this.layers = new Layers
-            {
-                epi = epi
-            };
-        }
+        public List<UnityObject> unityObjects;
 
         public string mapRepresentationString()
         {
@@ -92,8 +68,8 @@ namespace MapObjects
 
             
             sb.Append("Epi: \n");
-            foreach (EPI epi in this.layers.epi)
-                sb.Append("\tEPI: " + epi.type + " " + epi.pos[0] + " " + epi.pos[1] + "\n");
+            foreach (UnityObject unityObjects in this.unityObjects)
+                sb.Append("\tEPI: " + unityObjects.type + " " + unityObjects.pos[0] + " " + unityObjects.pos[1] +" " + unityObjects.pos[1] + "\n");
 
             return sb.ToString();
         }
