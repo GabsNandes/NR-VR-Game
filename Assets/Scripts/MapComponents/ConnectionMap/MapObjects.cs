@@ -47,6 +47,7 @@ namespace MapObjects
     [Serializable]
     public class UnityObject 
     {
+        public int id;
         public float[] pos;
         public string type;
 
