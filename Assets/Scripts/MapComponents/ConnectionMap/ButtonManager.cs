@@ -39,7 +39,8 @@ public class ButtonManager : MonoBehaviour
         }catch (Exception ex){
 
             Debug.Log("Ocorreu um erro para finalizar mapa: " + ex.Message);
-            throw;
+            
+            Debug.Log ("Using Default Scene");
         }
 
         
