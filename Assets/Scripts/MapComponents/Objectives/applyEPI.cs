@@ -42,6 +42,17 @@ public class applyEPI : MonoBehaviour
 
     }
 
+    void check(string name){
+        Debug.Log(name+"<--F");
+        toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
+        toggleSelect(toggleImg);
+        audioSource.Play();
+
+        if(son.tag != "Map"){
+            Destroy(son);
+        }
+    }
+
 
     public void OnCollisionEnter(Collision collision){
 
@@ -51,32 +62,26 @@ public class applyEPI : MonoBehaviour
         if(this.gameObject.name == "Head" && collision.gameObject.tag == "EPIHead"){
 
             name = detectEPI(collision);
+            check(name);
             
             
         }
 
-        if(this.gameObject.name == "Body" && collision.gameObject.tag == "EPIHead"){
+        if(this.gameObject.name == "Body" && collision.gameObject.tag == "EPIBody"){
                 
             name = detectEPI(collision);
+            check(name);
         
         }
 
         if(this.gameObject.name == "Feet" && collision.gameObject.tag == "EPIFeet"){
                 
             name = detectEPI(collision);
+            check(name);
         
         }
 
-        
-            
-            Debug.Log(name+"<--F");
-            toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
-            toggleSelect(toggleImg);
-            audioSource.Play();
-
-            if(son.tag != "Map"){
-                Destroy(son);
-            }
+    
             
 
         }

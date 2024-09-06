@@ -17,7 +17,7 @@ public class ObjectiveManager : MonoBehaviour
     private void OnTriggerEnter(Collider player){
 
 
-        if(player.tag == "Player"){
+        if(player.name == "Head"){
             
             if(Count_EPI.canMoveToNext){
 

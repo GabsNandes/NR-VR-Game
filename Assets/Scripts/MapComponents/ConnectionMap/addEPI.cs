@@ -174,11 +174,11 @@ public class addEPI : MonoBehaviour
         obj.layer = LayerEpi;
         obj.transform.parent = parent.transform;
         obj.tag = tag;
-
-
+        epitype = obj.tag+epitype;
+        Debug.Log("!!!!!!!"+epitype);
     
 
-        AddTagsToChildren(obj.transform, obj.tag, epitype);
+        AddTagsToChildren(obj.transform, epitype);
         AddLayersToChildren(obj.transform, LayerEpi);
 
 
@@ -196,13 +196,13 @@ public class addEPI : MonoBehaviour
         
     }
 
-    public void AddTagsToChildren(Transform parentTransform, string tag = "", string epitype = "")
+    public void AddTagsToChildren(Transform parentTransform, string tag = "")
     {
         
         foreach (Transform child in parentTransform)
         {
-           
-            child.gameObject.tag = tag + epitype;
+            
+            child.gameObject.tag = tag;
             AddTagsToChildren(child,tag);
         }
     }

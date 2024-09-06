@@ -82,7 +82,7 @@ MonoBehaviour:
       rotation: -150
       isGrabbable: 0
   - name: Veste
-    epiType: Feet
+    epiType: Body
     variations:
     - prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
       id: 5g
