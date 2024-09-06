@@ -40,6 +40,9 @@ namespace MapObjects
         public float offsetZ;
         public int rotation;
         public bool isGrabbable;
+
+        public string epiType;
+
     }
 
     

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Objects:
   - name: Botas
+    epiType: Feet
     variations:
     - prefab: {fileID: 5728894300798526661, guid: d7da5c00ff3fce94e9789911535494d8, type: 3}
       id: 1g
@@ -30,6 +31,7 @@ MonoBehaviour:
       rotation: 90
       isGrabbable: 0
   - name: Protetores de ouvido
+    epiType: Head
     variations:
     - prefab: {fileID: 2223300220527705521, guid: 19d5bf359a906764e96e548c1adc2f13, type: 3}
       id: 2g
@@ -46,6 +48,7 @@ MonoBehaviour:
       rotation: 0
       isGrabbable: 0
   - name: Oculos
+    epiType: Head
     variations:
     - prefab: {fileID: 3602506603097586117, guid: 787d09cd9be25da449a889038e09c57c, type: 3}
       id: 3g
@@ -62,6 +65,7 @@ MonoBehaviour:
       rotation: 180
       isGrabbable: 0
   - name: Capacete
+    epiType: Head
     variations:
     - prefab: {fileID: 7579273934183214453, guid: bcd27cf90fa747c419e6462d9ca31cc7, type: 3}
       id: 4g
@@ -78,6 +82,7 @@ MonoBehaviour:
       rotation: -150
       isGrabbable: 0
   - name: Veste
+    epiType: Feet
     variations:
     - prefab: {fileID: 6567996035568647600, guid: c792f3e7f04d83c49a956fa60d8636b4, type: 3}
       id: 5g

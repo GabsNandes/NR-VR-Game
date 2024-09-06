@@ -26,6 +26,7 @@ public class EpiData : ScriptableObject
         public float offsetZ;
         public int rotation;
         public bool isGrabbable;
+        
     
     }
 
@@ -36,7 +37,8 @@ public class EpiData : ScriptableObject
 
         public string name;
         
-        
+        public string epiType;
+
         public List<ObjectVariation> variations = new List<ObjectVariation>();
 
 
@@ -61,7 +63,8 @@ public class EpiData : ScriptableObject
                     offsetX = variation.offsetX,
                     offsetY = variation.offsetY,
                     offsetZ = variation.offsetZ,
-                    isGrabbable = variation.isGrabbable
+                    isGrabbable = variation.isGrabbable,
+                    epiType = Objects[i].epiType
                     
                     
                 };

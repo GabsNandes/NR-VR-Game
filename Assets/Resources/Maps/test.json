@@ -1,7 +1,12 @@
 {
 
-        
-        "unityObjects": [
+        "training":
+            {
+
+            "name": "treino1",
+            "description": "marcos",
+
+            "unityObjects": [
             {
                 "pos": [
                     2.6,
@@ -83,5 +88,8 @@
                 "type": "5i"
             }
         ]
+        }
+        
+        
     
 }

@@ -107,7 +107,8 @@ public class addEPI : MonoBehaviour
 
 
     private void InstanceProp(UnityObject prop, EpiData epiData, string tag = "")
-    {
+    {   
+        string epitype;
         string type = prop.type;
         float[] pos = prop.pos;
         ObjectPrefab propData = null;
@@ -127,6 +128,8 @@ public class addEPI : MonoBehaviour
 
         
         name = propData.name;
+        epitype = propData.epiType;
+
         Debug.Log("isGrabbable: " + propData.isGrabbable);
 
         if(propData.isGrabbable)
@@ -175,7 +178,7 @@ public class addEPI : MonoBehaviour
 
     
 
-        AddTagsToChildren(obj.transform, obj.tag);
+        AddTagsToChildren(obj.transform, obj.tag, epitype);
         AddLayersToChildren(obj.transform, LayerEpi);
 
 
@@ -193,13 +196,13 @@ public class addEPI : MonoBehaviour
         
     }
 
-    public void AddTagsToChildren(Transform parentTransform, string tag = "")
+    public void AddTagsToChildren(Transform parentTransform, string tag = "", string epitype = "")
     {
         
         foreach (Transform child in parentTransform)
         {
            
-            child.gameObject.tag = tag;
+            child.gameObject.tag = tag + epitype;
             AddTagsToChildren(child,tag);
         }
     }
@@ -215,6 +218,8 @@ public class addEPI : MonoBehaviour
                 InstanceProp(obj, epiObjectData, "EPI");
             }
 
+
+        Debug.Log(map.training.description);
         
         description.text = map.training.description;
 
@@ -239,9 +244,16 @@ public class addEPI : MonoBehaviour
 
         Debug.Log("defaultMapPath : " + defaultMapPath);
         defaultMapFile = MapLoader.mapFile;
+        
         Debug.Log(defaultMapFile);
 
+        if(defaultMapFile == "default"){
+            defaultMapFile = Resources.Load<TextAsset>(defaultMapPath).text;
+        }
+
         mapData = defaultMapFile;
+
+        Debug.Log(defaultMapFile);
 
 
         IMapParser mapParser = null;
@@ -255,7 +267,7 @@ public class addEPI : MonoBehaviour
     
         Session map = mapParser.ParseMap();
 
-        Debug.Log(map.training.unityObjects);
+        
         // Build the map
         BuildMap(map);
 

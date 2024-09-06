@@ -17,13 +17,9 @@ public class applyEPI : MonoBehaviour
     public AudioSource audioSource;
 
 
+    private string detectEPI(Collision collision){
 
-
-    public void OnCollisionEnter(Collision collision){
-
-        Debug.Log("WWWW"+collision.gameObject);
         
-        if(collision.gameObject.tag=="EPI"){
             
             parent = collision.gameObject.transform.parent;
             son = collision.gameObject;
@@ -40,8 +36,38 @@ public class applyEPI : MonoBehaviour
                 son = parent.gameObject;
                 Debug.Log(son.name);
                 name = son.gameObject.name;
+        }
+
+        return name;
+
+    }
+
+
+    public void OnCollisionEnter(Collision collision){
+
+        Debug.Log("WWWW"+collision.gameObject);
+        
+
+        if(this.gameObject.name == "Head" && collision.gameObject.tag == "EPIHead"){
+
+            name = detectEPI(collision);
+            
+            
+        }
+
+        if(this.gameObject.name == "Body" && collision.gameObject.tag == "EPIHead"){
                 
-            }
+            name = detectEPI(collision);
+        
+        }
+
+        if(this.gameObject.name == "Feet" && collision.gameObject.tag == "EPIFeet"){
+                
+            name = detectEPI(collision);
+        
+        }
+
+        
             
             Debug.Log(name+"<--F");
             toggleImg = GameObject.Find("EPI grabable/Canvas/Panel/"+name+"/Background/Checkmark").GetComponent<Image>();
@@ -54,8 +80,6 @@ public class applyEPI : MonoBehaviour
             
 
         }
-
-    }
 
     public void toggleSelect(Image toggleImg){
         
@@ -70,5 +94,5 @@ public class applyEPI : MonoBehaviour
             Count_EPI.canMoveToNext = true;
         }
     }
-
 }
+
