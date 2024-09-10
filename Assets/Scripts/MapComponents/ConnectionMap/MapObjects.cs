@@ -43,6 +43,8 @@ namespace MapObjects
 
         public string epiType;
 
+        public string apiID;
+
     }
 
     

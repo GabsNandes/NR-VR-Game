@@ -111,6 +111,7 @@ public class addEPI : MonoBehaviour
         string epitype;
         string type = prop.type;
         float[] pos = prop.pos;
+        int apiID = prop.id;
         ObjectPrefab propData = null;
         GameObject prefab = null;
         GameObject parent = null;
@@ -129,6 +130,11 @@ public class addEPI : MonoBehaviour
         
         name = propData.name;
         epitype = propData.epiType;
+
+        MapLoader.apiIddict[name] = apiID; 
+        
+
+        Debug.Log("!!!!!!!!!!jajja"+prop.id);
 
         Debug.Log("isGrabbable: " + propData.isGrabbable);
 
@@ -211,10 +217,12 @@ public class addEPI : MonoBehaviour
     {
         
         List<UnityObject> unityObjects = map.training.unityObjects;
+
+        MapLoader.sessionCode = map.code;
         
         foreach (UnityObject obj in unityObjects)
             {
-                
+                Debug.Log(obj.id);
                 InstanceProp(obj, epiObjectData, "EPI");
             }
 
@@ -267,7 +275,8 @@ public class addEPI : MonoBehaviour
     
         Session map = mapParser.ParseMap();
 
-        
+        MapLoader.sessionId = map.id;
+        MapLoader.sessionCode = map.code;
         // Build the map
         BuildMap(map);
 

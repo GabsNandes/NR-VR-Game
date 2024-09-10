@@ -6,4 +6,11 @@ public class MapLoader : MonoBehaviour
 {
     public static string mapFile = "default";
 
+    public static string sessionCode;
+
+    public static string sessionId;
+
+    public static readonly Dictionary<string, int> _apiIDdict= new Dictionary<string, int>();
+    public static Dictionary<string, int> apiIddict => _apiIDdict;
+
 }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using System.Net.Http;
 using System;
 using System.IO.Compression;
+using System.Text;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 public class checkGrab : MonoBehaviour
@@ -22,7 +24,7 @@ public class checkGrab : MonoBehaviour
     private Image toggleImg;
     private bool check = true;
 
-    private string url = "http://10.101.2.89:8080/api/v1/activities";
+    private string url = "http://10.101.0.39:8080/api/v1/activities";
 
     public void Start()
     {
@@ -53,21 +55,23 @@ public class checkGrab : MonoBehaviour
 
         Activity activity = new Activity();
 
-        activity.name = this.gameObject.name;
-        activity.sessionId = 1;
-        activity.unityObjectId = 2;
+        activity.name = "Object: " + this.gameObject.name + " was grabbed";
+        activity.sessionId = int.Parse(MapLoader.sessionId);
+        activity.unityObjectId = MapLoader.apiIddict[name];
 
         activity.posX = this.transform.position.x;
         activity.posY = this.transform.position.y;
         activity.posZ = this.transform.position.z;
 
-        string str = JsonUtility.ToJson(activity);
-        dynamic json = JsonConvert.DeserializeObject(str);
+        string jsonString = JsonUtility.ToJson(activity);
+        var content = new StringContent(jsonString, Encoding.UTF8, "application/json");
 
 
         try{
+            Debug.Log(content);
             using HttpClient httpClient = new HttpClient();
-            var response = httpClient.PostAsync(url,json);
+            var response = httpClient.PostAsync(url,content).Result;
+            Debug.Log(response);
 
 
         }catch(Exception ex){

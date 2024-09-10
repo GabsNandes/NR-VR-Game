@@ -15,7 +15,7 @@ public class ButtonManager : MonoBehaviour
     public ChangeScene changeScene;
     public TMP_InputField mapCode;
 
-    string url = "http://10.101.2.89:8080/api/v1/session/code";
+    string url = "http://10.101.0.39:8080/api/v1/session/code";
 
 
 

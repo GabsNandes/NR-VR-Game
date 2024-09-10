@@ -106,10 +106,16 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2828173728255886369}
         m_TargetAssemblyTypeName: checkGrab, Assembly-CSharp
-        m_MethodName: toggleSelect
+        m_MethodName: grabApi
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -119,12 +125,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -250,8 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af8ba79944113a4e95226143037171a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  epi: {fileID: 8009988568997438206}
-  toggleImg: {fileID: 0}
 --- !u!1001 &4965315701870968514
 PrefabInstance:
   m_ObjectHideFlags: 0

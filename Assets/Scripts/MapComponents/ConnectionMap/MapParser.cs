@@ -21,6 +21,9 @@ namespace MapParser
 
             var data = JsonUtility.FromJson<Session>(jsonString);
 
+            MapLoader.sessionId = data.id;
+            MapLoader.sessionCode = data.code;
+
             return data;
         }
 
