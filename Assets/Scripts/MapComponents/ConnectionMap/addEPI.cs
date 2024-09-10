@@ -140,7 +140,7 @@ public class addEPI : MonoBehaviour
 
         if(propData.isGrabbable)
         {
-            Count_EPI.epiArray.Append(name);
+        
 
             Create_entry(name);
             

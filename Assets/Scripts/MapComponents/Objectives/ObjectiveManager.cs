@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectiveManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ObjectiveManager : MonoBehaviour
 
     private bool Checked = false;
 
+    public ChangeScene changeScene;
+
     private void OnTriggerEnter(Collider player){
 
 
@@ -21,8 +24,11 @@ public class ObjectiveManager : MonoBehaviour
             
             if(Count_EPI.canMoveToNext){
 
+                MapLoader.Concluded = true;
+
                 Debug.Log("Concluded");
-                QuitGame();
+            
+                changeScene.scene_changer("Menu");
 
             }else{
 
@@ -32,14 +38,6 @@ public class ObjectiveManager : MonoBehaviour
 
         }
 
-    }
-
-    public void QuitGame()
-    {
-        #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-        #endif
-        Application.Quit();
     }
 
     void Start()

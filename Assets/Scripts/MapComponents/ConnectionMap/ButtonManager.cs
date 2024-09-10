@@ -1,52 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using TMPro;
-using UnityEngine.UI;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
-using JsonUtility = UnityEngine.JsonUtility;
-using System.Linq;
-using System;
+using UnityEngine;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
 {
     public ChangeScene changeScene;
     public TMP_InputField mapCode;
+    public TextMeshProUGUI text;
 
-    string url = "http://10.101.0.39:8080/api/v1/session/code";
+    private readonly string baseUrl = "http://10.101.0.39:8080/api/v1/session/code";
 
+    public async void OnClick()
+    {
+        string url = $"{baseUrl}/{mapCode.text}";
 
+        Debug.Log($"Requesting URL: {url}");
 
-    public void OnClick(){
-
-        Debug.Log(mapCode.text);
-        
-        url = url + "/" + mapCode.text;
-
-
-        try{
+        try
+        {
             
-            using HttpClient httpClient = new HttpClient();
-            var response = httpClient.GetAsync(url).Result;
-            response.EnsureSuccessStatusCode();
+            string jsonString = await FetchMapData(url);
 
-            string jsonString = response.Content.ReadAsStringAsync().Result;
+           
             Debug.Log(jsonString);
             MapLoader.mapFile = jsonString;
 
-        }catch (Exception ex){
-
-            Debug.Log("Ocorreu um erro para finalizar mapa: " + ex.Message);
             
-            Debug.Log ("Using Default Scene");
+            changeScene.scene_changer("SampleScene");
         }
+        catch (HttpRequestException httpEx)
+        {
+            HandleException("HTTP Request Error", httpEx);
+        }
+        catch (TaskCanceledException taskEx)
+        {
+            HandleException("Request Timeout", taskEx);
+        }
+        catch (Exception ex)
+        {
+            HandleException("General Error", ex);
+        }
+    }
 
-        
-        
+    private async Task<string> FetchMapData(string url)
+    {
+        using (HttpClient httpClient = new HttpClient())
+        {
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadAsStringAsync();
+        }
+    }
 
-        changeScene.scene_changer("SampleScene");
+    private void HandleException(string message, Exception ex)
+    {
+        MapLoader.Warn = true;
+        if (text != null)
+        {
+            text.gameObject.SetActive(true);
+        }
+        Debug.LogError($"{message}: {ex.Message}");
+    }
 
+    public void Quit()
+    {
+        changeScene.quit();
     }
 }

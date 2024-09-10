@@ -13,4 +13,8 @@ public class MapLoader : MonoBehaviour
     public static readonly Dictionary<string, int> _apiIDdict= new Dictionary<string, int>();
     public static Dictionary<string, int> apiIddict => _apiIDdict;
 
+
+    public static bool Warn;
+    public static bool Concluded;
+
 }

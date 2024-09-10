@@ -11,8 +11,17 @@ public class ChangeScene : MonoBehaviour
 
 
     public void scene_changer(string scene_name){
+
+        Count_EPI.EPICheck = 0;
+        Count_EPI.epiCount = 0;
+        Count_EPI.canMoveToNext = false;
+
         SceneManager.LoadScene(scene_name);  
       
+    }
+
+    public void LoadDefault(){
+        scene_changer("SampleScene");
     }
 
     public void quit(){

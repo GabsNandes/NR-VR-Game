@@ -8,8 +8,6 @@ public class Count_EPI : MonoBehaviour
 
     public static int epiCount = 0;
 
-    public static string [] epiArray = new string[10];
-
     public static bool canMoveToNext = false;
 
     
