@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a17f7608094d94f87ca2b1eb4cc3c2, type: 3}
+  m_Name: CarData
+  m_EditorClassIdentifier: 
+  Objects:
+  - name: Carros
+    epiType: Car
+    variations:
+    - prefab: {fileID: 884976597615184584, guid: 549f74c0397e78e41a9c8197a6ff6aeb, type: 3}
+      id: 5g
+      offsetX: 0
+      offsetY: 0.95
+      offsetZ: 0
+      rotation: -90
+      isGrabbable: 1
+      apiID: 

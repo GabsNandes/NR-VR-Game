@@ -1,0 +1,42 @@
+# Blender 4.4.3 MTL File: 'Sketchfab_2022_08_12_10_08_05.blend'
+# www.blender.org
+
+newmtl BodyEmission
+Ns 360.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl BodyGlass
+Ns 729.975403
+Ka 0.272727 0.272727 0.272727
+Ks 0.843860 0.843860 0.843860
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+illum 6
+map_Kd C:/Users/Multi-Maracana/Downloads/low-poly-cartoon-style-car-03/textures/WindowDiffuseAlpha.png
+map_d C:/Users/Google Drive/Mani_projekti/3D_projekti/Vehicle_list/Vehicles/Vehicle_02/WindowAlpha.png
+
+newmtl BodyGlossy
+Ns 582.409607
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Multi-Maracana/Downloads/low-poly-cartoon-style-car-03/textures/Diffuse.png
+
+newmtl BodyMatte
+Ns 42.132957
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Multi-Maracana/Downloads/low-poly-cartoon-style-car-03/textures/Diffuse.png
