@@ -1,0 +1,18 @@
+Carroceria: 
+Comprimento: 3,68 metros. 
+Entre-eixos: 2,42 metros. 
+Porta-malas: 290 litros. 
+Componentes do Carro: Liga Metalica. 
+Cor: Azul
+$Motorização: 
+Motor: 1.0 SCe (Smart Control efficiency) de 3 cilindros. 
+Combustível: Flex (etanol e gasolina). 
+Potência: 71 cv (etanol) / 68 cv (gasolina) a 5.500 rpm. 
+Torque: 10,0 kgfm (etanol) / 9,4 kgfm (gasolina) a 4.250 rpm. 
+Cilindrada: 999 cm³. 
+Tanque de combustível: 38 litros.
+$Rodas:
+Suspensão: Dianteira McPherson e traseira com eixo de torção. 
+Freios: ABS. 
+Aro: polegadas. 
+Pneu: 165/70R14

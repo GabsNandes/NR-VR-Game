@@ -9,6 +9,10 @@ TagManager:
   - EPIHead
   - EPIBody
   - EPIFeet
+  - Engine
+  - Bonet
+  - Wheel
+  - Door
   layers:
   - Default
   - TransparentFX

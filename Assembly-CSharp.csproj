@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Movement\InteractionController.cs" />
     <Compile Include="Assets\Scripts\MapComponents\ConnectionMap\ButtonManager.cs" />
     <Compile Include="Assets\Scripts\EpiInfo\checkGrab.cs" />
+    <Compile Include="Assets\infoGetter.cs" />
     <Compile Include="Assets\Scripts\MapComponents\Objectives\canvasLoader.cs" />
     <Compile Include="Assets\Scripts\TransitionScene\quit.cs" />
     <Compile Include="Assets\Scripts\Movement\teleportationManager.cs" />
@@ -118,6 +119,7 @@
     <None Include="Assets\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.dll" />
     <None Include="Assets\epiresume.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\betterInfo.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
