@@ -7,17 +7,24 @@ public class ChangeScene : MonoBehaviour
 {
 
     public static ChangeScene instance;
+    
+    public void basic_change(string scene_name)
+    {
+        BasicSceneChanger.pos += 1;
+        SceneManager.LoadScene(scene_name); 
+    }
 
 
 
-    public void scene_changer(string scene_name){
+    public void scene_changer(string scene_name)
+    {
 
         Count_EPI.EPICheck = 0;
         Count_EPI.epiCount = 0;
         Count_EPI.canMoveToNext = false;
 
-        SceneManager.LoadScene(scene_name);  
-      
+        SceneManager.LoadScene(scene_name);
+
     }
 
     public void LoadDefault(){

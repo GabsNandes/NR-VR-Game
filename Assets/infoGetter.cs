@@ -17,20 +17,55 @@ public class infoGetter : MonoBehaviour
 
     private TextMeshProUGUI infocar;
 
+    private TextMeshProUGUI infoCheck;
+
     string[] collectioncar;
 
     public Image targetImage;
 
     private Sprite loadedSprite;
+
+    private Image toggleImg;
+
+    private int doorCounter = 0;
+
+    private int wheelCounter = 0;
+
+    private int checks = 0;
+
+    public void toggleSelect(Image toggleImg)
+    {
+
+        if (!toggleImg.enabled)
+        {
+            toggleImg.enabled = true;
+
+        }
+
+    }
+
+    void check(string name)
+    {
+
+        Debug.Log(name + "<--F");
+        toggleImg = GameObject.Find("check/Canvas/Panel/" + name + "/Background/Checkmark").GetComponent<Image>();
+        toggleSelect(toggleImg);
+
+        checks += 1;
+
+        if (checks == 4)
+        {
+            infocar.text = "Todos os componentes foram analizados, hora de fazer o novo carro!";
+            loadedSprite = Resources.Load<Sprite>("car");
+            targetImage.sprite = loadedSprite;
+        }
+
+
+    
+    }
     
     void Start()
     {
-        loadedSprite = Resources.Load<Sprite>("car");
-        if (loadedSprite != null)
-        {
-            targetImage.sprite = loadedSprite;
-            targetImage.enabled = true;
-        }
 
         text = file.ToString();
 
@@ -63,11 +98,19 @@ public class infoGetter : MonoBehaviour
         
                 targetImage.sprite = loadedSprite;
                 targetImage.enabled = true;
+                wheelCounter += 1;
         
 
                 infocar.text = collectioncar[2];
                 Destroy(collider.gameObject);
                 Debug.Log(collider.tag);
+                infoCheck = GameObject.Find("check/Canvas/Panel/Wheel/Label").GetComponent<TextMeshProUGUI>();
+                infoCheck.text = "Rodas " + wheelCounter + "/4";  
+
+                if (wheelCounter == 4)
+                {
+                    check("Wheel");
+                }
 
                 break;
 
@@ -83,6 +126,10 @@ public class infoGetter : MonoBehaviour
                 Destroy(collider.gameObject);
                 Debug.Log(collider.tag);
 
+                
+                check("Engine");
+                
+
                 break;
 
             case "Bonet":
@@ -96,6 +143,8 @@ public class infoGetter : MonoBehaviour
                 Destroy(collider.gameObject);
                 Debug.Log(collider.tag);
 
+                check("Bonet");
+
                 break;
 
             case "Door":
@@ -104,10 +153,20 @@ public class infoGetter : MonoBehaviour
         
                 targetImage.sprite = loadedSprite;
                 targetImage.enabled = true;
+                doorCounter += 1;
 
                 infocar.text = collectioncar[0];
                 Destroy(collider.gameObject);
                 Debug.Log(collider.tag);
+                infoCheck = GameObject.Find("check/Canvas/Panel/Door/Label").GetComponent<TextMeshProUGUI>();
+                infoCheck.text = "Portas " + doorCounter + "/2"; 
+
+                if (doorCounter == 2)
+                {
+                    check("Door");
+                }
+
+                
 
                 break;
 
